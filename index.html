@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pixel Arena | Tienda Gamer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header id="inicio">
+    <h1>Pixel Arena</h1>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#resenas">Reseñas</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="productos">
+      <h2>Productos</h2>
+      <div class="contenedor-cards">
+        <article class="card">
+          <img src="img/producto1.png" alt="Auriculares gamer">
+          <h3>Auriculares Gamer 7.1</h3>
+          <p>Sonido envolvente, micrófono con cancelación de ruido y luces RGB.</p>
+          <span class="precio">$45.000</span>
+        </article>
+        <article class="card">
+          <img src="img/producto2.png" alt="Teclado mecánico RGB">
+          <h3>Teclado Mecánico RGB</h3>
+          <p>Switches mecánicos, retroiluminación personalizable y anti-ghosting.</p>
+          <span class="precio">$38.000</span>
+        </article>
+        <article class="card">
+          <img src="img/producto3.png" alt="Mouse gamer RGB">
+          <h3>Mouse Gamer RGB</h3>
+          <p>Diseño ergonómico, iluminación LED multicolor y botones programables.</p>
+          <span class="precio">$62.000</span>
+        </article>
+      </div>
+    </section>
+
+    <section id="resenas">
+      <h2>Reseñas</h2>
+      <div class="grid-resenas">
+        <article class="resena">
+          <p>"El mouse es súper preciso y las luces RGB se pueden configurar a gusto. Lo uso todos los días."</p>
+          <h4>Tomás L.</h4>
+        </article>
+        <article class="resena">
+          <p>"Los auriculares se escuchan increíble, en los shooters escucho los pasos desde lejos."</p>
+          <h4>Camila S.</h4>
+        </article>
+        <article class="resena">
+          <p>"El teclado es muy cómodo y las luces RGB quedan espectaculares en el setup."</p>
+          <h4>Nicolás F.</h4>
+        </article>
+      </div>
+    </section>
+
+    <section id="video">
+      <h2>PROXIMAMENTE</h2>
+      <iframe src="https://www.youtube.com/embed/iP6nWMvfu-U" title="Video del Mouse King Pro" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <form action="https://formspree.io/f/xgavroyw" method="POST">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Pixel Arena. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
