@@ -10,6 +10,13 @@ body {
   font-family: 'Roboto', sans-serif;
   color: #e0e0e0;
   background-color: #0f0f1a;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
 }
 
 h1, h2, h3 {
@@ -18,6 +25,10 @@ h1, h2, h3 {
 
 img {
   max-width: 100%;
+}
+
+a {
+  color: #00e5ff;
 }
 
 section {
@@ -44,8 +55,9 @@ header {
   border-bottom: 2px solid #b026ff;
 }
 
-header h1 {
+header h1 a {
   color: #fff;
+  text-decoration: none;
   text-shadow: 0 0 10px #b026ff;
 }
 
@@ -60,11 +72,64 @@ nav a {
   color: #e0e0e0;
   text-decoration: none;
   font-weight: 700;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
   transition: color 0.3s;
 }
 
 nav a:hover {
   color: #00e5ff;
+}
+
+/* Página actual */
+nav a[aria-current="page"] {
+  color: #00e5ff;
+  border-bottom-color: #b026ff;
+}
+
+/* Inicio: hero y botones */
+.hero {
+  text-align: center;
+  padding: 90px 20px;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: #a0a0b8;
+}
+
+.botones {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.boton {
+  padding: 12px 30px;
+  background: linear-gradient(90deg, #b026ff, #00e5ff);
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.boton-secundario {
+  background: transparent;
+  border: 2px solid #b026ff;
+}
+
+.boton:hover {
+  box-shadow: 0 0 15px rgba(176, 38, 255, 0.6);
+}
+
+.aviso {
+  text-align: center;
+  margin-top: 30px;
+  color: #a0a0b8;
 }
 
 /* Productos: cards con Flexbox */
@@ -118,14 +183,16 @@ nav a:hover {
   color: #00e5ff;
 }
 
-/* Reseñas: Grid */
-.grid-resenas {
+/* Reseñas e inicio: Grid */
+.grid-resenas,
+.destacados {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
 
-.resena {
+.resena,
+.destacado {
   background-color: #1a1a2e;
   padding: 20px;
   border-left: 4px solid #b026ff;
@@ -137,8 +204,15 @@ nav a:hover {
   margin-bottom: 10px;
 }
 
-.resena h4 {
+.resena h3,
+.destacado h3 {
+  font-size: 1rem;
   color: #00e5ff;
+  margin-bottom: 8px;
+}
+
+.destacado p {
+  color: #a0a0b8;
 }
 
 /* Video */
@@ -204,6 +278,10 @@ footer {
     flex-direction: column;
     align-items: center;
     gap: 10px;
+  }
+
+  .hero {
+    padding: 60px 20px;
   }
 
   #contacto {
